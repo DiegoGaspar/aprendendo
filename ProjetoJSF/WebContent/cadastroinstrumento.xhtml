@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<h:outputStylesheet library="css" name="style.css"/>
+<title>BusqueMusico.com</title>
+</h:head>	
+<h:body style="background:url('resources/img/fundo.jpg') repeat !important;">
+ <h:form styleClass="menusistema">
+ <h:panelGrid columns="4">
+      	<h:commandButton value="Inicio"  action="/home.xhtml"/>
+		<h:commandButton value="Cadastro Instrumento"  action="#{instrumentoBean.paginaCadastro}"/>
+		<h:commandButton value="Lista de Instrumento"  action="#{instrumentoBean.listar}"/>
+		<h:commandButton value="Lista de Musicos"  action="#{musicoBean.listar}"/>
+ 
+ </h:panelGrid>
+</h:form>
+<h1>Cadastro de Instrumentos</h1>
+<div id="paginaSistema">
+
+	<h:form>
+	<h:messages/>
+	<h:panelGrid columns="2">
+		<h:outputText value="Nome"></h:outputText>
+		<h:inputText value="#{instrumentoBean.instrumento.nome}"/>
+		<h:commandButton action="#{instrumentoBean.salvar}" value="Salvar"></h:commandButton>		
+	</h:panelGrid>
+	
+	</h:form>
+</div>
+</h:body>
+</html>
